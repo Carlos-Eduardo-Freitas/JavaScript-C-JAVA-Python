@@ -1,1 +1,46 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
 
+/**
+ * Beecrowd 1004 - Produto Simples
+ * * O problema pede para ler dois valores inteiros, calcular o produto entre eles
+ * e exibir a mensagem "PROD = " seguida pelo valor do resultado.
+ */
+
+const A = parseInt(lines[0]);
+const B = parseInt(lines[1]);
+
+// Realiza a multiplicação entre os dois valores
+let PROD = A * B;
+
+// Exibe o resultado conforme a formatação exigida pelo Beecrowd
+
+# Beecrowd 1004 - Produto Simples
+
+Este repositório contém a solução para o problema 1004 da plataforma [Beecrowd](https://www.beecrowd.com.br/) (antigo URI Online Judge), utilizando **JavaScript (Node.js)**.
+
+## 📝 Descrição do Problema
+Leia dois valores inteiros. A seguir, calcule o produto entre estes dois valores e atribua esta operação à variável **PROD**. A seguir mostre a variável **PROD** com a mensagem correspondente.   
+
+### Entrada
+O arquivo de entrada contém 2 valores inteiros.
+
+### Saída
+Imprima a mensagem "PROD" e a variável **PROD** conforme exemplo abaixo, com um espaço em branco antes e depois da igualdade.
+
+**Exemplo de Entrada:**
+3
+9
+
+
+**Exemplo de Saída:**
+PROD = 27
+### Fluxograma da Solução
+```mermaid
+flowchart TD
+    A([Início]) --> B[/Ler A/]
+    B --> C[/Ler B/]
+    C --> D[PROD = A * B]
+    D --> E[/Exibir PROD/]
+    E --> F([Fim])
+``` 
