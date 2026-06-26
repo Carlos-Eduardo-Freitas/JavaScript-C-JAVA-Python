@@ -1,0 +1,6 @@
+
+let NUMBER = parseInt(prompt("digite o seu numero:  "));
+let SALARY = parseInt(prompt("digite quanto ganha por hora: "));
+let HOUR = parseFloat(prompt("digite quantas horas trabalhadas: "));
+console.log('NUMBER = '+ NUMBER);
+console.log('SALARY = U$ '+ (SALARY * HOUR));
