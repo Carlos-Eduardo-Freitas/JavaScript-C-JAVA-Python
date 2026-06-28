@@ -41,8 +41,8 @@ Sou graduando em **Ciência da Computação** na **UNIFOR**. Meu foco principal 
 ## 📊 Estatísticas do GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SEU_USUARIO_AQUI&show_icons=true&theme=gotham&include_all_commits=true" alt="Estatísticas do GitHub" height="160px"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO_AQUI&layout=compact&theme=gotham&langs_count=6" alt="Linguagens mais usadas" height="160px"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=carloseduardorei-alt&show_icons=true&theme=gotham&include_all_commits=true" alt="Estatísticas do GitHub" height="160px"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=carloseduardorei-alt&layout=compact&theme=gotham&langs_count=6" alt="Linguagens mais usadas" height="160px"/>
 </p>
 
 ---
