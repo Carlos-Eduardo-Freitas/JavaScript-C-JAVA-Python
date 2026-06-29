@@ -9,7 +9,13 @@ Nesta aula, o foco será apenas em **vetores**. Matrizes serão estudadas na pr�
 
 Um **array** é uma estrutura usada para armazenar vários valores em uma única variável.
 
-<img src="imgs/array_conceito.png" width="700">
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e3f2fd', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#fff'}}}%%
+graph LR
+    subgraph Array ["Estrutura de um Array (Variável Única)"]
+        V1["Valor 1"] --- V2["Valor 2"] --- V3["Valor 3"] --- V4["..."] --- V5["Valor N"]
+    end
+```
 
 **Figura 9.1** - Ideia geral de array como estrutura para armazenar vários valores relacionados.
 
@@ -18,7 +24,16 @@ Existem diferentes formas de classificar arrays. Nesta aula, vamos usar duas cla
 - classificação pelo **tamanho**;
 - classificação pela **quantidade de dimensões**.
 
-<img src="imgs/tipos-de-arrays.png" width="700">
+```graph TD
+    A["Arrays (Estruturas de Dados)"] --> B["Quanto ao Tamanho"]
+    A --> C["Quanto às Dimensões"]
+    
+    B --> B1["Tamanho Fixo<br>(Imutável após criação)"]
+    B --> B2["Dinâmico / Variável<br>(Cresce conforme a necessidade)"]
+    
+    C --> C1["Unidimensional<br>(Vetores - 1 dimensão)"]
+    C --> C2["Multidimensionais<br>(Matrizes - 2 ou mais dimensões)"]
+```
 
 **Figura 9.2** - Classificação geral dos arrays por tamanho e por quantidade de dimensões.
 
@@ -68,12 +83,14 @@ Quanto às dimensões, podemos pensar em arrays de uma ou mais dimensões.
 #### Array de uma dimensão
 
 Um array de uma dimensão também é chamado de **vetor**.
-
-<img src="imgs/vetor.png" width="700">
-
 Ele pode ser imaginado como uma única linha de valores:
 
-<img src="imgs/array-unidimensional-vetor.png" width="700">
+```graph LR
+    subgraph Vetor ["Vetor (Sequência Linear)"]
+        direction LR
+        N0["[0]<br>8.5"] --- N1["[1]<br>7.0"] --- N2["[2]<br>9.2"] --- N3["[3]<br>6.5"] --- N4["[4]<br>10.0"]
+    end
+```
 
 **Figura 9.3** - Representação de um array de uma dimensão, também chamado de vetor.
 
@@ -91,8 +108,11 @@ Um array de duas dimensões pode ser usado para representar uma tabela ou matriz
 
 Exemplo conceitual:
 
-<img src="imgs/array-bidimensional-matriz.png" width="700">
-
+```matrix
+|---|---|---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+```
 **Figura 9.4** - Representação de um array bidimensional, organizado em linhas e colunas.
 
 | | Coluna 0 | Coluna 1 | Coluna 2 |
@@ -102,8 +122,11 @@ Exemplo conceitual:
 
 Também existem arrays com mais dimensões, como arrays tridimensionais.
 
-<img src="imgs/array-tridimensional.png" width="700">
-
+```graph TD
+    subgraph Tridimensional ["Matriz 3D (Bloco / Cubo de Dados)"]
+        A["Profundidade 0 (Matriz 2D)"] --- B["Profundidade 1 (Matriz 2D)"] --- C["Profundidade 2 (Matriz 2D)"]
+    end
+```
 **Figura 9.5** - Representação conceitual de um array tridimensional.
 
 Matrizes serão estudadas na próxima aula. Nesta aula, elas aparecem apenas para mostrar que **vetor** é o primeiro caso de array que precisamos dominar.
@@ -125,8 +148,17 @@ Essa solução funciona para poucos valores, mas fica ruim quando a quantidade a
 
 Um **array** resolve esse problema guardando vários valores sob um mesmo nome.
 
-<img src="imgs/importancia-dos-arrays.png" width="700">
+```graph TD
+    subgraph Sem_Array ["Abordagem Sem Array (Variáveis Isoladas)"]
+        n1["nota1 = 8.5"]
+        n2["nota2 = 7.0"]
+        n3["nota3 = 9.2"]
+    end 
+    subgraph Com_Array ["Abordagem Com Array (Estrutura Unificada)"]
+        notas["notas = [ 8.5, 7.0, 9.2, 6.5, 10.0 ]"]
+    end
 
+  ``` 
 **Figura 9.6** - Uso de arrays para armazenar vários valores relacionados em uma única estrutura.
 
 ```javascript
