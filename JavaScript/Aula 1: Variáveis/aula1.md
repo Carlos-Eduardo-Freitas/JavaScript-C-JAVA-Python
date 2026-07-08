@@ -1,17 +1,19 @@
-# Raciocínio Lógico Algorítmico: Aula 2
+# Aula: Introdução à Lógica de Programação e Algoritmos
+
 ## O que é lógica?
 
-> Lógica é a análise de métodos de raciocínio (Mendelson, 1987)
+> "Lógica é a análise de métodos de raciocínio" (Mendelson, 1987)
 
-> Lógica é essencialmente o estudo da natureza do raciocínio e as formas de incrementar sua utilização.” (Andrews, 1996).
+> "Lógica é essencialmente o estudo da natureza do raciocínio e as formas de incrementar sua utilização." (Andrews, 1996)
 
 ## O que é um algoritmo?
 
 Um algoritmo pode ser definido como uma sequência de passos que visam a atingir um objetivo bem definido (Forbellone, 1999).
 Algoritmo é a descrição de uma sequência de passos que deve ser seguida para a realização de uma tarefa (Ascencio, 1999).
-Portanto, nada mais que “um conjunto de etapas para executar uma tarefa”.
+Portanto, nada mais que "um conjunto de etapas para executar uma tarefa".
 
 ## Estrutura básica de um algoritmo
+
 Em lógica de programação, o roteiro para resolver a maioria dos programas iniciais é:
 
 ```mermaid
@@ -22,14 +24,23 @@ flowchart LR
 
 ## Tipos de representação de algoritmo
 
+Existem quatro formas principais de representar um algoritmo, cada uma com vantagens e desvantagens. Ao longo da aula vamos usar as quatro nos mesmos exercícios, para comparar.
+
+| Representação | Vantagem | Desvantagem |
+|---|---|---|
+| Descrição narrativa | Não exige aprender notação nova | Língua natural é ambígua |
+| Fluxograma | Visual, fácil de acompanhar o fluxo | Exige aprender a simbologia |
+| Pseudocódigo | Sintaxe próxima de uma linguagem real | Exige aprender as regras do pseudocódigo |
+| Teste de mesa | Confirma se a lógica está correta com valores reais | Não é uma forma de *descrever* o algoritmo, e sim de *verificá-lo* |
+
 ### Descrição narrativa
-A descrição narrativa consiste em analisar o enunciado do problema e escrever, utilizando uma lingua-gem natural (por exemplo, a língua portuguesa), os passos a serem seguidos para sua resolução.
+A descrição narrativa consiste em analisar o enunciado do problema e escrever, utilizando uma linguagem natural (por exemplo, a língua portuguesa), os passos a serem seguidos para sua resolução.
 
 * **Vantagem**: Não é necessário aprender nenhum conceito novo.
 * **Desvantagem**: Língua natural abre espaço para várias interpretações.
 
 ### Fluxograma
-O fluxograma consiste em analisar o enunciado do problema e escrever, utilizando símbolos gráficos predefinidos (Figura 2.2), os passos a serem seguidos para sua resolução.
+O fluxograma consiste em analisar o enunciado do problema e escrever, utilizando símbolos gráficos predefinidos (Tabela 2.1), os passos a serem seguidos para sua resolução.
 
 * **Vantagem**: Simples entendimento de elementos gráficos.
 * **Desvantagem**: Necessário aprender a simbologia dos fluxogramas.
@@ -47,20 +58,42 @@ O fluxograma consiste em analisar o enunciado do problema e escrever, utilizando
 
 ```mermaid
 flowchart TD
-    A([INÍCIO])
-    B[\ENTRADA DE DADOS\]
-    C[PROCESSAMENTO]
-    D{DECISÃO}
-    E[/"SAÍDA DE DADOS"/]
-    F([Fim])
+    A([INÍCIO]) --> B[\ENTRADA DE DADOS\]
+    B --> C[PROCESSAMENTO]
+    C --> D{DECISÃO}
+    D --VERDADEIRO--> E[/"SAÍDA DE DADOS A"/]
+    D --FALSO--> F[/"SAÍDA DE DADOS B"/]
+    E --> G([FIM])
+    F --> G
 ```
-**Figura 2.2** - Conjunto de símbolos utilizados no fluxograma. Fonte: ASCENCIO, Ana Fernanda Gomes et al. Fundamentos da programação de computadores. Pearson Educación, 2012.
+**Figura 2.2** - Exemplo de fluxograma usando todos os símbolos da Tabela 2.1, incluindo um ponto de decisão (losango) com dois desvios possíveis. Baseado em: ASCENCIO, Ana Fernanda Gomes et al. Fundamentos da programação de computadores. Pearson Educación, 2012.
 
 ### Pseudocódigo
-O pseudocódigo ou portugol consiste em analisar o enunciado do problema e escrever, por meio de regras predefinidas, os passos a serem seguidos para sua resolução.
+O pseudocódigo (também chamado de *portugol*) consiste em analisar o enunciado do problema e escrever, por meio de regras predefinidas, os passos a serem seguidos para sua resolução — numa sintaxe próxima de uma linguagem de programação real, mas em português.
 
 * **Vantagem**: Regras de sintaxe próxima à linguagem de programação.
 * **Desvantagem**: Necessário aprender as regras do pseudocódigo.
+
+Nesta disciplina vamos seguir esta convenção simples:
+
+| Instrução | Significado |
+|---|---|
+| `INICIO` / `FIM` | delimitam o início e o fim do algoritmo |
+| `LEIA variavel` | entrada de dados |
+| `ESCREVA expressao` | saída de dados |
+| `variavel <- expressao` | atribuição de valor |
+| `SE condicao ENTAO ... SENAO ... FIMSE` | estrutura de decisão |
+| `// texto` | comentário (não é executado) |
+
+Exemplo — soma de dois números:
+```
+INICIO
+  LEIA num1
+  LEIA num2
+  soma <- num1 + num2
+  ESCREVA soma
+FIM
+```
 
 ## Teste de mesa
 Teste de mesa é uma forma de simular manualmente a execução de um algoritmo. Você escolhe valores de entrada, acompanha o valor das variáveis passo a passo e registra a saída esperada. Isso ajuda a entender o algoritmo e a verificar se o resultado faz sentido.
@@ -73,7 +106,7 @@ Exemplo: Soma de dois números com entrada `2` e `3`:
 | -4   | 5    | 1    | 1     |
 | 0    | 7    | 7    | 7     |
 
-> “O teste de mesa é semelhante a tirar a prova dos nove.” (MANZANO, 2019)
+> "O teste de mesa é semelhante a tirar a prova dos nove." (MANZANO, 2019)
 
 Em resumo, o teste de mesa é uma verificação manual do raciocínio do programador, feita em papel, para conferir se a lógica está correta.
 
@@ -85,7 +118,7 @@ Nesta disciplina, alguns exemplos de algoritmos serão mostrados também em Java
 > Nesta aula, vamos usar `var` por simplicidade. `var` é uma palavra usada para criar variáveis. Nas próximas aulas, vamos ver os riscos de usar `var` e passaremos a usar apenas `let` e `const`.
 
 ### Compilador
-Um compilador é um programa que traduz um código escrito em uma linguagem (por exemplo, C ou Java) para outra forma que o computador entende diretamente. Em linguagens interpretadas (como JS), essa tradução acontece de forma diferente: o código é executado por um motor de execução, sem uma etapa explícita de compilação como em C.
+Um compilador é um programa que traduz um código escrito em uma linguagem (por exemplo, C ou Java) para outra forma que o computador entende diretamente. Em linguagens interpretadas (como JS), essa tradução acontece de forma diferente: o código é executado por um motor de execução (*engine*, como o V8 do Chrome/Node.js), sem uma etapa explícita de compilação como em C.
 
 > Se quiser testar códigos rapidamente no navegador, você pode usar um compilador online, como o [Programiz Online Compiler](https://www.programiz.com/).
 
@@ -131,6 +164,17 @@ D --> E[/"resultado"/]
 E --> F([FIM])
 ```
 
+#### Pseudocódigo
+
+```
+INICIO
+  LEIA num1
+  LEIA num2
+  resultado <- num1 * num2
+  ESCREVA resultado
+FIM
+```
+
 #### Teste de mesa
 
 | num1 | num2 | resultado | saída |
@@ -167,6 +211,16 @@ A([INICIO]) --> B[\tempC\]
 B --> C["tempF = (9/5) * tempC + 32"]
 C --> D[/"tempF"/]
 D --> E([FIM])
+```
+
+#### Pseudocódigo
+
+```
+INICIO
+  LEIA tempC
+  tempF <- (9 / 5) * tempC + 32
+  ESCREVA tempF
+FIM
 ```
 
 #### Teste de mesa
@@ -212,6 +266,21 @@ E --> H([FIM])
 G --> H
 ```
 
+#### Pseudocódigo
+
+```
+INICIO
+  LEIA num1
+  LEIA num2
+  SE num2 == 0 ENTAO
+    ESCREVA "impossível dividir"
+  SENAO
+    resultado <- num1 / num2
+    ESCREVA resultado
+  FIMSE
+FIM
+```
+
 #### Teste de mesa
 
 | num1 | num2 | resultado | saída               |
@@ -237,14 +306,14 @@ if (num2 === 0) {
 ```
 
 ### Questão 4
-Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de testes, um algoritmo para dizer se um número é par ou impar.
+Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de testes, um algoritmo para dizer se um número é par ou ímpar.
 
 > Observação: o símbolo `%` (módulo) calcula o resto da divisão inteira. Vamos detalhar os operadores na próxima aula.
 
 #### Descrição narrativa
 1. Ler um número.
 2. Calcular o resto da divisão por 2.
-3. Se o resto for 0, mostrar "par"; caso contrário, mostrar "impar".
+3. Se o resto for 0, mostrar "par"; caso contrário, mostrar "ímpar".
 
 #### Fluxograma
 
@@ -253,10 +322,24 @@ flowchart TD
 A([INICIO]) --> B[\num\]
 B --> C[resto = num % 2]
 C --> D{resto === 0}
-D --FALSE--> E[/"impar"/]
+D --FALSE--> E[/"ímpar"/]
 D --TRUE--> F[/"par"/]
 E --> G([FIM])
 F --> G
+```
+
+#### Pseudocódigo
+
+```
+INICIO
+  LEIA num
+  resto <- num % 2
+  SE resto == 0 ENTAO
+    ESCREVA "par"
+  SENAO
+    ESCREVA "ímpar"
+  FIMSE
+FIM
 ```
 
 #### Teste de mesa
@@ -264,7 +347,7 @@ F --> G
 | numero | resto | resto == 0 | saída   |
 | --     | --    | --         | --      | 
 | 0      | 0     | V          | "par"   |
-| 13     | 1     | F          | "impar" |
+| 13     | 1     | F          | "ímpar" |
 | 30     | 0     | V          | "par"   |
 
 #### Código JavaScript (Programiz)
@@ -279,7 +362,7 @@ var resto = num % 2;
 if (resto === 0) {
   console.log("par");
 } else {
-  console.log("impar");
+  console.log("ímpar");
 }
 ```
 
@@ -303,6 +386,21 @@ E --TRUE--> F[/"Aprovado"/]
 E --FALSE--> G[/"Reprovado"/]
 F --> H([FIM])
 G --> H
+```
+
+#### Pseudocódigo
+
+```
+INICIO
+  LEIA nota1
+  LEIA nota2
+  media <- (nota1 + nota2) / 2
+  SE media >= 7 ENTAO
+    ESCREVA "Aprovado"
+  SENAO
+    ESCREVA "Reprovado"
+  FIMSE
+FIM
 ```
 
 #### Teste de mesa
@@ -330,7 +428,7 @@ if (media >= 7) {
 }
 ```
 
-## Referências Bbibliográficas
+## Referências Bibliográficas
 1. FORBELLONE, A. L. V. Lógica de Programação: A construção de algoritmos e estruturas de dados. Editora (s) Pearson Prentice Hall, 2005. CAPÍTULOS 1 e 2.
 2. ASCENCIO, Ana Fernanda Gomes; DE CAMPOS, Edilene Aparecida Veneruchi. Fundamentos da programação de computadores. Pearson Educación, 2008. CAPÍTULO 1, 2 e 3
 3. MANZANO, José Augusto NG; DE OLIVEIRA, Jayr Figueiredo. Lógica para Desenvolvimento de Programação de Computadores. São Paulo: Érica, 2019. CAPÍTULO 1, 2 e 3
@@ -342,6 +440,4 @@ Se você entender a seguinte piada, você já está entendendo algo sobre algori
 
     Ele(a) estava lavando os cabelos e seguindo as instruções na embalagem do xampu.
 
-    Ele(a) leu: “Faça espuma. Enxágue. Repita.”
-
-Bons estudos!
+    Ele(a) leu: "Faça espuma. Enxágue. Repita."
