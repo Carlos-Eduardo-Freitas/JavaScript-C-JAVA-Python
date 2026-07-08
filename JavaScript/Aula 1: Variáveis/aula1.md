@@ -378,18 +378,17 @@ Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de test
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[\nota1\]
-B --> C[\nota2\]
-C --> D[media = (nota1 + nota2) / 2]
-D --> E{media >= 7}
-E --TRUE--> F[/"Aprovado"/]
-E --FALSE--> G[/"Reprovado"/]
-F --> H([FIM])
-G --> H
+    A([INICIO]) --> B[/nota1/]
+    B --> C[/nota2/]
+    C --> D["media = (nota1 + nota2) / 2"]
+    D --> E{"media >= 7"}
+    E -->|TRUE| F[/"Aprovado"/]
+    E -->|FALSE| G[/"Reprovado"/]  
+    F --> H([FIM])
+    G --> H
 ```
 
 #### Pseudocódigo
-
 ```
 INICIO
   LEIA nota1
@@ -404,7 +403,6 @@ FIM
 ```
 
 #### Teste de mesa
-
 | nota1 | nota2 | media | media >= 7 | saída       |
 | --    | --    | --    | --         | --          |
 | 8     | 6     | 7     | V          | "Aprovado"  |
