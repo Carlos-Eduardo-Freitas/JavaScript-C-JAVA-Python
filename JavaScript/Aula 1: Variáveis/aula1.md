@@ -1,5 +1,15 @@
 # Aula: Introdução à Lógica de Programação e Algoritmos
 
+## Sumário
+- [O que é lógica?](#o-que-é-lógica)
+- [O que é um algoritmo?](#o-que-é-um-algoritmo)
+- [Estrutura básica de um algoritmo](#estrutura-básica-de-um-algoritmo)
+- [Tipos de representação de algoritmo](#tipos-de-representação-de-algoritmo)
+- [Teste de mesa](#teste-de-mesa)
+- [Observações importantes](#observações-importantes)
+- [Exercícios](#exercícios)
+- [Referências Bibliográficas](#referências-bibliográficas)
+
 ## O que é lógica?
 
 > "Lógica é a análise de métodos de raciocínio" (Mendelson, 1987)
@@ -18,7 +28,7 @@ Em lógica de programação, o roteiro para resolver a maioria dos programas ini
 
 ```mermaid
 flowchart LR
-    A([INICIO]) --> B[\ENTRADA DE DADOS\] --> C[PROCESSAMENTO DE DADOS] --> D[/"SAIDA DE DADOS"/] --> E([FIM])
+    A([INÍCIO]) --> B[\ENTRADA DE DADOS\] --> C[PROCESSAMENTO DE DADOS] --> D[/"SAÍDA DE DADOS"/] --> E([FIM])
 ```
 **Figura 2.1** - Estrutura básica de um algoritmo
 
@@ -56,13 +66,15 @@ O fluxograma consiste em analisar o enunciado do problema e escrever, utilizando
 
 **Tabela 2.1** – Conjunto de símbolos utilizados no fluxograma
 
+> **Convenção usada nesta aula:** entrada de dados sempre em `[\variavel\]`, saída sempre em `[/"texto"/]`, decisão sempre em `{condição}` com os desvios rotulados `|VERDADEIRO|` e `|FALSO|`. Manter essa convenção fixa em todos os fluxogramas evita confundir entrada com saída ao ler o diagrama.
+
 ```mermaid
 flowchart TD
     A([INÍCIO]) --> B[\ENTRADA DE DADOS\]
     B --> C[PROCESSAMENTO]
     C --> D{DECISÃO}
-    D --VERDADEIRO--> E[/"SAÍDA DE DADOS A"/]
-    D --FALSO--> F[/"SAÍDA DE DADOS B"/]
+    D -->|VERDADEIRO| E[/"SAÍDA DE DADOS A"/]
+    D -->|FALSO| F[/"SAÍDA DE DADOS B"/]
     E --> G([FIM])
     F --> G
 ```
@@ -108,7 +120,7 @@ Exemplo: Soma de dois números com entrada `2` e `3`:
 
 > "O teste de mesa é semelhante a tirar a prova dos nove." (MANZANO, 2019)
 
-Em resumo, o teste de mesa é uma verificação manual do raciocínio do programador, feita em papel, para conferir se a lógica está correta.
+Em resumo, o teste de mesa é uma verificação manual do raciocínio do programador, feita em papel, para conferir se a lógica está correta. **Regra prática:** a coluna "saída" deve mostrar exatamente o que o `ESCREVA` (ou o `console.log`) produziria — nada de acrescentar palavras que o algoritmo não escreve.
 
 ## Observações importantes
 
@@ -136,7 +148,7 @@ No teclado ABNT2, o acento grave (\`) fica na tecla entre `P` e `[`; use `Shift`
 
 ```mermaid
 flowchart LR
-A([INICIO]) --> B([FIM])
+A([INÍCIO]) --> B([FIM])
 ```
 
 ### Mermaid
@@ -157,7 +169,7 @@ Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de test
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[\num1\]
+A([INÍCIO]) --> B[\num1\]
 B --> C[\num2\]
 C --> D[resultado = num1 * num2]
 D --> E[/"resultado"/]
@@ -207,7 +219,7 @@ Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de test
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[\tempC\]
+A([INÍCIO]) --> B[\tempC\]
 B --> C["tempF = (9/5) * tempC + 32"]
 C --> D[/"tempF"/]
 D --> E([FIM])
@@ -225,11 +237,11 @@ FIM
 
 #### Teste de mesa
 
-| tempC  | tempF | saída                 | 
-| --     | --    | --                    |
-| 0      | 32    | 32 graus Fahrenheit   |
-| 10     | 50    | 50 graus Fahrenheit   |
-| -17.78 | 0.00  | 0.00 graus Fahrenheit |
+| tempC  | tempF | saída  |
+| --     | --    | --     |
+| 0      | 32    | 32     |
+| 10     | 50    | 50     |
+| -17.78 | 0.00  | 0.00   |
 
 #### Código JavaScript (Programiz)
 
@@ -256,11 +268,11 @@ Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de test
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[\num1\]
+A([INÍCIO]) --> B[\num1\]
 B --> C[\num2\]
 C --> D{num2 == 0}
-D --TRUE--> E[/"impossível dividir"/]
-D --FALSE--> F[resultado = num1 / num2]
+D -->|VERDADEIRO| E[/"impossível dividir"/]
+D -->|FALSO| F[resultado = num1 / num2]
 F --> G[/"resultado"/]
 E --> H([FIM])
 G --> H
@@ -283,11 +295,11 @@ FIM
 
 #### Teste de mesa
 
-| num1 | num2 | resultado | saída               |
-| --   | --   | --        | --                  |
-| 10   | 2    | 5         | 5                   |
-| 9    | 4.5  | 2         | 2                   |
-| 7    | 0    | -         | "impossível dividir" |
+| num1 | num2 | resultado | saída                 |
+| --   | --   | --        | --                    |
+| 10   | 2    | 5         | 5                     |
+| 9    | 4.5  | 2         | 2                     |
+| 7    | 0    | -         | "impossível dividir"  |
 
 #### Código JavaScript (Programiz)
 
@@ -319,11 +331,11 @@ Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de test
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B[\num\]
+A([INÍCIO]) --> B[\num\]
 B --> C[resto = num % 2]
 C --> D{resto === 0}
-D --FALSE--> E[/"ímpar"/]
-D --TRUE--> F[/"par"/]
+D -->|VERDADEIRO| E[/"par"/]
+D -->|FALSO| F[/"ímpar"/]
 E --> G([FIM])
 F --> G
 ```
@@ -345,7 +357,7 @@ FIM
 #### Teste de mesa
 
 | numero | resto | resto == 0 | saída   |
-| --     | --    | --         | --      | 
+| --     | --    | --         | --      |
 | 0      | 0     | V          | "par"   |
 | 13     | 1     | F          | "ímpar" |
 | 30     | 0     | V          | "par"   |
@@ -378,12 +390,12 @@ Represente, em descrição narrativa, fluxograma, pseudocódigo e tabela de test
 
 ```mermaid
 flowchart TD
-    A([INICIO]) --> B[/nota1/]
-    B --> C[/nota2/]
+    A([INÍCIO]) --> B[\nota1\]
+    B --> C[\nota2\]
     C --> D["media = (nota1 + nota2) / 2"]
     D --> E{"media >= 7"}
-    E -->|TRUE| F[/"Aprovado"/]
-    E -->|FALSE| G[/"Reprovado"/]  
+    E -->|VERDADEIRO| F[/"Aprovado"/]
+    E -->|FALSO| G[/"Reprovado"/]
     F --> H([FIM])
     G --> H
 ```
