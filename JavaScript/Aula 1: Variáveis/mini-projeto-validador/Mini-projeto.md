@@ -18,10 +18,3 @@ Usando apenas o que foi visto na aula (variáveis, tipos, operadores relacionais
 - Transforme os valores fixos em `prompt()` (se rodar no navegador) para tornar o script interativo.
 - Trate o caso em que `mediaFinal` está fora do intervalo 0–10 (valor inválido).
 
-## Onde entregar
-Salve sua solução em `exemplos/validador-academico.js` e faça commit com uma mensagem descritiva, por exemplo:
-```
-git add exemplos/validador-academico.js
-git commit -m "feat: adiciona validador de situacao academica"
-git push
-```
