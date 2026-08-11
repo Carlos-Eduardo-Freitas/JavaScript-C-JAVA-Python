@@ -1,6 +1,6 @@
 # Aula de Java — Estruturas Condicionais (if, else, if-else)
 
-> Complemento da [Aula de Java para Iniciantes](./aula-java-basico.md). Aqui o programa aprende a **tomar decisões** — e a gente aprende junto, com bastante exemplo, uma pitada de história da programação e frases de gente que fez a computação acontecer.
+> Complemento da [Aula de Java para Iniciantes](../Aula%201/aula-java-basico.md). Aqui o programa aprende a **tomar decisões** — e a gente aprende junto, com bastante exemplo, uma pitada de história da programação e frases de gente que fez a computação acontecer.
 
 ---
 
