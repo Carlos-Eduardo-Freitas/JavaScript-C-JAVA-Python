@@ -1,6 +1,6 @@
 # Aula de Java — Estruturas de Repetição (for, while, do-while)
 
-> Complemento das aulas anteriores: [Aula de Java para Iniciantes](./aula-java-basico.md) e [Estruturas Condicionais](./aula-java-condicionais.md). Agora vamos ensinar o programa a **repetir tarefas** sem que a gente precise copiar e colar a mesma linha de código cem vezes.
+> Complemento das aulas anteriores: [Aula de Java para Iniciantes](../Aula%201/aula-java-basico.md) e [Estruturas Condicionais](./aula-java-condicionais.md). Agora vamos ensinar o programa a **repetir tarefas** sem que a gente precise copiar e colar a mesma linha de código cem vezes.
 
 ---
 
