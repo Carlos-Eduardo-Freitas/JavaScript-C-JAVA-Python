@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+    public static double fatorial(int n) {
+        double fator = 1;
+
+        for (var i = 1; i <= n; i++) {
+            fator = i * fator;
+        }
+
+        return fator;
+    }
+
+    public static void main(String[] args){
+        Scanner dado = new Scanner(System.in);
+        System.out.println("Número de termos:");
+        int n = dado.nextInt();
+        System.out.println("Valor de x (em radianos):");
+        double x = dado.nextDouble(); 
+        double s = 0;
+        int i = 1;
+        int sinal = 1;
+
+        for (var j = 0; j < n; j++) {
+            double termo = Math.pow(x, i) / fatorial(i);
+            s = s + sinal * termo;
+            i = i + 2;
+            sinal = -sinal;
+        }
+
+        System.out.println("S = " + s);
+        dado.close();
+    }
+}
