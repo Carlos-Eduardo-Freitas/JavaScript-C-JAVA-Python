@@ -1,6 +1,6 @@
 # Aula de Java — Vetores (Arrays)
 
-> Complemento das aulas anteriores: [Aula de Java para Iniciantes](../Aula%201/aula-java-basico.md), [Estruturas Condicionais](../Aula%202/aula-java-condicionais.md), [Estruturas de Repetição](../Aula%203/aula-java-laços.md) e [Funções e Algoritmos Clássicos](../Aula204/aula-java-funcoes.md). Agora vamos aprender a guardar **vários valores relacionados** numa única estrutura, e usar isso para resolver problemas clássicos que aparecem em praticamente todo curso de programação.
+> Complemento das aulas anteriores: [Aula de Java para Iniciantes](../Aula%201/aula-java-basico.md), [Estruturas Condicionais](../Aula%202/aula-java-condicionais.md), [Estruturas de Repetição](../Aula%203/aula-java-laços.md) e [Funções e Algoritmos Clássicos](../Aula%204/aula-java-funcoes.md). Agora vamos aprender a guardar **vários valores relacionados** numa única estrutura, e usar isso para resolver problemas clássicos que aparecem em praticamente todo curso de programação.
 
 ---
 
