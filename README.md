@@ -18,7 +18,6 @@ Sou graduando em **Ciência da Computação** na **UNIFOR**, com foco no desenvo
 
 - 🧠 **Resolução de Problemas:** pratico lógica constantemente com desafios de programação competitiva (Beecrowd).
 - 🎓 **Ensino:** crio cursos completos e gratuitos de Java e JavaScript no GitHub, voltados para iniciantes.
-- 🎮 **Desenvolvimento de Jogos:** recriando o clássico *Space Invaders* na Godot Engine.
 - 🧮 **Base Teórica:** forte interesse em Matemática Avançada aplicada à computação.
 - 🗣️ **Idiomas:** fluência em Inglês, com foco avançado em interpretação e literatura técnica.
 
@@ -41,12 +40,6 @@ Curso irmão do curso de JavaScript, também organizado por capítulos, com um e
 - `switch case`, vetores (arrays) e técnicas com vetores: inversão, busca linear, busca binária, bubble sort
 - Matrizes em Java, incluindo questões em nível de olimpíada (estilo OBI)
 - Operador ternário
-
-### 🎮 Space Invaders — Godot Engine
-Recriação do clássico jogo de fliperama, construída do zero.
-- Desenvolvido em **Godot 4.x** com **GDScript**
-- Cena do Player com movimento lateral via Input Map
-- Sistema de tiro com `Area2D`, `CollisionShape2D` e detecção de colisão via sinais
 
 ### 🎓 CS50 — Introdução à Ciência da Computação (Harvard)
 Cursando a versão em português do CS50, com exercícios resolvidos em C.
