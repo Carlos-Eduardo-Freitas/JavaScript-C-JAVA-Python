@@ -14,11 +14,11 @@
 
 ## 🚀 Sobre Mim
 
-Sou graduando em **Ciência da Computação** na **UNIFOR**. Meu foco principal está no desenvolvimento de softwares eficientes, simulações interativas e na resolução de problemas complexos através da programação estruturada.
+Sou graduando em **Ciência da Computação** na **UNIFOR**, com foco no desenvolvimento de software eficiente, simulações interativas e resolução de problemas complexos através da programação estruturada.
 
-- 🧠 **Resolução de Problemas:** Pratico constantemente minha lógica através de desafios de programação competitiva.
-- 🧮 **Base Teórica:** Forte interesse e dedicação aos estudos de Matemática Avançada aplicada à computação.
-- 🗣️ **Idiomas:** Fluência em Inglês, com foco avançado voltado para interpretação e estudo de literatura.
+- 🧠 **Resolução de Problemas:** pratico lógica constantemente com desafios de programação competitiva.
+- 🧮 **Base Teórica:** forte interesse em Matemática Avançada aplicada à computação.
+- 🗣️ **Idiomas:** fluência em Inglês, com foco avançado em interpretação e literatura técnica.
 
 ---
 
@@ -38,8 +38,8 @@ Sou graduando em **Ciência da Computação** na **UNIFOR**. Meu foco principal 
 - **Fundamentos:** Lógica de Programação, Estruturas de Dados e Resolução de Problemas
 
 ### 🔧 Ecossistema de Desenvolvimento
-- **Ambientes & IDEs:** VS Code, Programiz
-- **Plataformas & Prática:** Beecrowd, GitHub
+- **Ambientes & IDEs:** VS Code
+- **Plataformas & Prática:** Beecrowd, Programiz, GitHub
 
 ---
 
