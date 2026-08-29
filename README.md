@@ -53,5 +53,5 @@ Sugestões, correções ou dúvidas são sempre bem-vindas! Sinta-se à vontade 
 ---
 
 <p align="center">
-  <sub>Feito com ☕ e código por <a href="https://github.com/carloseduardorei-alt">Carlos Eduardo</a>. Bons estudos!</sub>
+  <sub>Feito com ☕ e código por <a href="https://github.com/CarlosEduardoFreitasCarvalho">CarlosEduardo</a>. Bons estudos!</sub>
 </p>
