@@ -1,6 +1,6 @@
 # Curso Completo de C — Do Zero ao Avançado
 
-> Curso teórico e prático da linguagem C, organizado em capítulos modulares, no espírito denso e sem atalhos de "Matemática para Vencer" (Laércio Vasconcelos): nada é pulado, cada linha de código é justificada, e a prática é exaustiva. Ambiente de referência: **CLion (JetBrains)**.
+> Curso teórico e prático da linguagem C, organizado em capítulos modulares, no espírito denso e sem atalhos de "Matemática para Vencer" (Laércio Vasconcelos). Ambiente de referência: **CLion (JetBrains)**.
 
 ---
 
